@@ -1,0 +1,21 @@
+{
+  "name": "tei-publisher-eleventy-starter",
+  "version": "1.0.0",
+  "description": "Simple template project to set up 11ty with TEI Publisher as backend for XML documents",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=tei-publisher eleventy --serve",
+    "build": "DEBUG=tei-publisher eleventy",
+    "build.all": "TP_NO_CACHE=true DEBUG=tei-publisher eleventy",
+    "clean": "rimraf _site .cache"
+  },
+  "author": "Wolfgang Meier",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@teipublisher/pb-components": "^1.40.2",
+    "@teipublisher/pb-eleventy-plugin": "^0.9.11",
+    "rimraf": "^3.0.2"
+  }
+}

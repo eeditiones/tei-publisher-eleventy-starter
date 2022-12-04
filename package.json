@@ -2,7 +2,6 @@
   "name": "tei-publisher-eleventy-starter",
   "version": "1.0.0",
   "description": "Simple template project to set up 11ty with TEI Publisher as backend for XML documents",
-  "main": "index.js",
   "scripts": {
     "start": "DEBUG=tei-publisher eleventy --serve",
     "build": "DEBUG=tei-publisher eleventy",

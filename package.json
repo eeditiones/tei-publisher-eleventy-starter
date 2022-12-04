@@ -8,8 +8,15 @@
     "build.all": "TP_NO_CACHE=true DEBUG=tei-publisher eleventy",
     "clean": "rimraf _site .cache"
   },
-  "author": "Wolfgang Meier",
+  "author": {
+    "name": "e-editiones.org",
+    "url": "https://e-editiones.org"
+  },
   "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eeditiones/tei-publisher-eleventy-starter.git"
+  },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-navigation": "^0.3.5",

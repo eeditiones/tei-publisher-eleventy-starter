@@ -3,6 +3,7 @@
 }
 
 .text {
+    height: calc(100vh - 56px);
     display: grid;
     grid-template-rows: auto 1fr;
 }

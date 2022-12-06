@@ -1,8 +1,11 @@
 ---
 layout: base.njk
+doc: "test/F-rom.xml"
+odd: "shakespeare"
+view: "page"
 ---
 
-<pb-document id="document1" path="test/F-rom.xml" odd="shakespeare" view="page"></pb-document>
+<pb-document id="document1" path="{{doc}}" odd="{{odd}}" view="{{view}}"></pb-document>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="toc-panel" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
@@ -10,10 +13,11 @@ layout: base.njk
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body toc">
+    {% tpfetch "api/document/" + (doc | urlencode) + "/contents?target=transcription&icons=true" %}
   </div>
 </div>
 <div class="row">
-    <div class="col text fixed-height">
+    <div class="col text">
         <ul class="nav justify-content-start align-items-center gx-2 flex-nowrap">
             <li class="nav-item">
                 <button class="btn btn-light" data-bs-toggle="offcanvas" data-bs-target="#toc-panel"><i class="bi bi-list-columns-reverse"></i></button>
@@ -37,7 +41,7 @@ layout: base.njk
             </li>
         </ul>
         <pb-view id="view1" src="document1" append-footnotes="append-footnotes" subscribe="transcription" emit="transcription"
-            static="{{context}}" wait-for="#facsimile">
+            static="{{context}}" wait-for="#facsimile" column-separator=".tei-cb">
         </pb-view>
     </div>
     <pb-facsimile class="col fixed-height" id="facsimile" base-uri="https://apps.existsolutions.com/cantaloupe/iiif/2/"

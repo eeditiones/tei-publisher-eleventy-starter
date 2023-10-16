@@ -15,8 +15,7 @@ module.exports = (eleventyConfig) => {
     });
 
     eleventyConfig.addPlugin(tpPlugin, {
-        remote: 'http://localhost:8080/exist/apps/tei-publisher/'
-        // collections: true
+        remote: 'http://127.0.0.1:8080/exist/apps/tei-publisher/',
     });
 
     return {

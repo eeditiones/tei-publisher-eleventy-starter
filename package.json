@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple template project to set up 11ty with TEI Publisher as backend for XML documents",
   "scripts": {
-    "start": "DEBUG=tei-publisher eleventy --serve",
+    "start": "DEBUG=tei-publisher eleventy --serve --port=8081",
     "build": "DEBUG=tei-publisher eleventy",
     "build.all": "TP_NO_CACHE=true DEBUG=tei-publisher eleventy",
     "clean": "rimraf _site .cache"
@@ -18,10 +18,10 @@
     "url": "git+https://github.com/eeditiones/tei-publisher-eleventy-starter.git"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "@teipublisher/pb-components": "^1.40.2",
-    "@teipublisher/pb-eleventy-plugin": "^0.9.11",
-    "rimraf": "^3.0.2"
+    "@teipublisher/pb-components": "^2.12.6",
+    "@teipublisher/pb-eleventy-plugin": "^0.10.0",
+    "rimraf": "^5.0.5"
   }
 }
